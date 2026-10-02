@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "glasto-practice-site",
+  "account_id": "<your Cloudflare account id>",
+  // Wherever you serve it from.
+  "routes": [{ "pattern": "<your hostname>", "custom_domain": true }],
+  "compatibility_date": "2026-08-01",
+  "main": "./src/index.ts",
+  "assets": { "directory": "./public", "binding": "ASSETS" },
+  // Where the guide videos are kept: `/video/<name>` streams them, without a
+  // sign-in, for sharing a link with anyone.
+  "r2_buckets": [
+    {
+      "binding": "MEDIA",
+      "bucket_name": "<your video bucket>"
+    }
+  ],
+  "observability": { "enabled": true }
+}

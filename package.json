@@ -1,0 +1,14 @@
+{
+  "name": "glasto-practice-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --port 5274 --persist-to ../web/.wrangler/state",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2",
+    "wrangler": "^4.122.0"
+  }
+}
